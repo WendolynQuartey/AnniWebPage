@@ -70,10 +70,6 @@ const Timeline = ({ months, currentIndex, onSelect }) => {
     return { x: randomX, y: randomY };
   };
 
-  const getMonthAbbr = (monthName) => {
-    return monthName.slice(0, 3);
-  };
-
   return (
     <div className="timeline-wrapper">
       <div className="timeline-container" ref={timelineRef}>
@@ -103,10 +99,7 @@ const Timeline = ({ months, currentIndex, onSelect }) => {
                     </div>
                   </div>
                   <div className="timeline-content">
-                    <div className="timeline-label">{getMonthAbbr(month.month)}</div>
-                    {isActive && (
-                      <div className="timeline-month-full">{month.displayName}</div>
-                    )}
+                    <div className="timeline-label">{month.displayName}</div>
                   </div>
                 </div>
               );

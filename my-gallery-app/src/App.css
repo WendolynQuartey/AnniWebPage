@@ -9,7 +9,7 @@ body, html {
   height: 100%;
   overflow-y: auto;
   scroll-behavior: smooth;
-  background: #0a0a0a;
+  background: #fff5f9;
 }
 
 /* Hide scrollbar */
@@ -31,7 +31,7 @@ html::-webkit-scrollbar {
   width: 100vw;
   min-height: 100vh;
   position: relative;
-  background: radial-gradient(ellipse at center, #1a1a1a 0%, #0a0a0a 100%);
+  background: radial-gradient(circle at top, #ffe3ee 0%, #ffd5e7 35%, #ffc6da 70%, #ff9fbd 100%);
   overflow-x: hidden;
 }
 
