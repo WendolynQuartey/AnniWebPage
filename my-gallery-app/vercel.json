@@ -1,11 +1,17 @@
 {
-  "framework": "vite",
-  "buildCommand": "cd my-gallery-app && npm run build",
-  "outputDirectory": "my-gallery-app/dist",
-  "rewrites": [
+  "builds": [
     {
-      "source": "/(.*)",
-      "destination": "/index.html"
+      "src": "my-gallery-app/package.json",
+      "use": "@vercel/static-build",
+      "config": {
+        "distDir": "my-gallery-app/dist"
+      }
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/my-gallery-app/dist/$1"
     }
   ]
 }
